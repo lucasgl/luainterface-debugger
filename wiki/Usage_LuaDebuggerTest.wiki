@@ -76,7 +76,7 @@ exit (e):
 
 >
 }}}
-You see all commands available. You can use the fullk command name or the short one (shown in braces).
+You see all commands available. You can use the full command name or the short one (shown in braces).
 Some of the commands are only available when the debugger has stoped and vice versa.
 
 To load a script call:
