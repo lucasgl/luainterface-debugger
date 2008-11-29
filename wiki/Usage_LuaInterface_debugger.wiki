@@ -1,5 +1,5 @@
+#summary Usage of LuaInterface-debugger.
 #labels Featured,Phase-Implementation,Phase-Design
-#Usage of LuaInterface-debugger.
 
 = Introduction =
 
@@ -103,4 +103,3 @@ The files and breakpoints are represented by the classes
   * `LuaDebugBreakpoint`
 You can "subclass" these classes by implementing the two class factories `LuaDebugFileFactory` and `LuaDebugBreakpointFactory`.
 Simply assign the factories to the LuaDebugger instance.
-
