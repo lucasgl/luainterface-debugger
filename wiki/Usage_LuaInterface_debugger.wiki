@@ -1,0 +1,34 @@
+#labels Featured,Phase-Implementation,Phase-Design
+#Usage of LuaInterface-debugger.
+
+= Introduction =
+
+This page should give you a short overview on how to use the LuaInterface-debugger.
+
+= Details =
+
+First of all you need to use the correct namespaces:
+{{{
+using LuaInterface;
+using LuaInterface.Debugger;
+}}}
+
+Next you have to create an instance of LuaInterface and LuaInterface-debugger,
+and handle the necessarry events.
+{{{
+Lua lua = new Lua();
+lua.HookException += Lua_HookException;
+
+LuaDebugger debugger = new LuaDebugger(lua);
+debugger.Stoping += Debugger_Stoping;
+debugger.WaitingForAction += Debugger_WaitingForAction;
+}}}
+Create a instance of Lua as always or use an existing one.
+You should handle the Lua.HookException event, in case that any Exceptions are thrown inside your debug code.
+Then create a instance of LuaDebugger and pass your lua interpreter to it in the constructor.
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
